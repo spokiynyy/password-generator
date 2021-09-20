@@ -1,0 +1,31 @@
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+ 
+<div class="container text-center">
+ 
+ <h1>Password Generator</h1>
+
+ <form action="{% url 'password' %}">
+     <select name="length">
+         <option value="8">8</option>
+         <option value="9">9</option>
+         <option value="10">10</option>
+         <option value="11">11</option>
+         <option value="12" selected="selected" >12</option>
+         <option value="13">13</option>
+         <option value="14">14</option>
+         <option value="15">15</option>
+    </select>Length
+<br>    
+    <input type="checkbox" name="uppercase">Uppercase
+<br>
+<input type="checkbox" name="numbers">numbers
+<br>
+<input type="checkbox" name="special">special
+<br>
+
+    <input type="submit" value="Generate Password" class="btn btn-primary">
+
+    <a href="{% url 'credit' %}">credit page</a>
+
+ </form> 
+</div>
